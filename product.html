@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/60503f0e0d.js" crossorigin="anonymous"></script>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400);
+        @import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+        *{
+            font-family: sans-serif;
+        }
+        ul{
+          display:flex;
+          padding: 20px; 
+          /* justify-content: space-between; */
+        }
+        .nav{
+            background-color: #1A237E;
+            color: whitesmoke;
+            font-weight: bold;
+        }
+        li{
+            list-style: none;
+        }
+        img{
+         height: 50px;
+        }
+        #srch{
+            width: 350px;
+            margin-left: 150px;
+            height: 35px;
+            border: 0;
+        }
+        button{
+            margin-left: 5px;
+            height: 37px;
+            width: 150px;
+            border: 0ch;
+        }
+        .nvrt{
+           margin-left: 50px;
+        }
+        .checked {
+           color: orange;
+        }
+        #dvimg, #dvhead,#dvhd{
+            display: flex;
+            
+        }
+        #blhv{
+            height: 100px;
+        }
+        #dvhead {
+            margin-left: 30px;
+            line-height: 10px;
+        }
+        .nav2{
+            background-color: #9FA8DA;
+            color: whitesmoke;
+            font-weight: bold;
+           
+        }
+        #nvhm{
+            margin-left: 40px;
+            font-size: 25px;
+            height: 100%;
+        }
+        #nvhm:hover{
+            background-color: blue;
+        }
+        #about_dv{
+            text-align: center;
+            line-height: 33px;
+            font-size: 17px;
+            margin-top: 70px;
+        }
+        #spacific {
+            display: flex;
+        }
+        .spdv {
+            display: flex;
+            margin-left: 50px;
+        }
+        .icon{
+            margin-bottom: 20px;
+            margin-top: 20px;
+            font-size: 30px;
+            margin-right: 15px;
+            background-color: #9FA8DA;
+            width: 70px;
+            text-align: center;
+            border-radius: 50%;
+        }
+        .icntxt{
+            line-height: 17px;
+        }
+        #productSevices{
+            margin:4%,4%,20%, 4%; 
+            display:inline-flex;
+            grid-template-columns: 10% 10% 10% 10%;
+            grid-gap: 1%;
+            justify-content: center;
+        }
+        #prod1{
+            height: 450px;
+            /* border: 1px solid; */
+            width: 250px;
+            margin: 20px;
+            padding: 10px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+        #prod1:hover{
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
+        #imid{
+            width: 100%;
+            height: 300px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+        i{
+            margin-top: 15px;
+        }
+        #prServ{
+            text-align: center;
+            margin-top: 70px;
+        }
+        #PRid, #NMid,#SZid{
+            text-align: center;
+        }
+        #ctbtn{
+            margin-left: 50px;
+            background-color: tomato;
+            border-radius: 5px;
+        }
+        #ctbtn:hover{
+           background-color: yellowgreen;
+        }
+        .container {
+          width: 400px;
+          margin: 0 auto;
+          margin-top: 3em;
+          background-color: #EFEFEF;
+          padding: 4px;
+         
+        }
+        
+        .inner {
+          padding: 1em;
+          background-color: white;
+          overflow: hidden;
+          position: relative;
+          -webkit-border-radius: 4px; 
+          -moz-border-radius: 4px; 
+          border-radius: 4px; 
+        }
+        
+        .rating {
+          float: left;
+          width: 45%;
+          margin-right: 5%;
+          text-align: center;
+        }
+        
+        .rating-num {
+          color: #333333;
+          font-size: 72px;
+          font-weight: 100;
+          line-height: 1em; 
+        }
+        
+        .rating-stars {
+          font-size: 20px;
+          color: #E3E3E3;
+          margin-bottom: .5em;
+        }
+        .rating-stars .active {
+          color: #737373;
+        }
+        
+        .rating-users {
+          font-size: 14px;
+        }
+        
+        .histo {
+          float: left;
+          width: 50%;
+          font-size: 13px;
+        }
+        
+        .histo-star {
+          float: left;
+          padding: 3px;
+        
+        }
+        
+        .histo-rate {
+          width: 100%;
+          display: block;
+          clear: both;
+        }
+        
+        .bar-block {
+          margin-left: 5px;
+          color: black;
+          display: block;
+          float: left;
+          width: 75%;
+          position: relative;
+        }
+        
+        .bar {
+          padding: 4px;
+          display: block;
+        }
+        
+        #bar-five {
+          width: 0;
+          background-color: #9FC05A;
+        }
+        
+        #bar-four {
+          width: 0;
+          background-color: #ADD633;
+        }
+        
+        #bar-three {
+          width: 0;
+          background-color: #FFD834;
+        }
+        
+        #bar-two {
+          width: 0;
+          background-color: #FFB234;
+        }
+        
+        #bar-one {
+          width: 0;
+          background-color: #FF8B5A;
+        }
+        .gettouch{
+            background-color: #1A237E;
+            color: whitesmoke;
+            
+        }
+        #touchbox{
+            display: flex;
+            /* margin-left: 10px; */
+            gap: 10%;
+            /* border: 1px solid; */
+        }
+        #dv1{
+            /* margin-left: 0PX; */
+            width: 33%;
+        }
+        .tle{
+          background-color: teal;
+          border: 0;
+          color: white;
+          font-size: 16px;
+        }
+        .brtle{
+          color: teal;
+          border: 1px solid teal;
+          font-size: 16px;
+        }
+        #inpt{
+          margin-bottom: 20px;
+        }
+        #topsupplier{
+             display: flex;
+             
+             /* padding: 20px; */
+        }
+        #topsupplier > div{
+          margin-left: 3%;
+          /* border: 1px solid; */
+          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+          padding: 30px;
+        }
+        .blu{
+          color: blue;
+        }
+        .tel{
+          color: teal;
+        }
+        #topsupplier > div > div > button{
+          background-color: teal;
+          color: white;
+          font-size: 16px;
+        }
+        #topsupplier > div > img{
+          height: 300px;
+          width: 200px;
+          margin-left: 50px;
+          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+          
+        }
+        #topsupplier > div > div{
+          text-align: center;
+          line-height: 15px;
+          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+        #topsupplier > div:hover{
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
+        #reltd   {
+         display: grid;
+         gap: 1.5%;
+         row-gap:25px ;
+         grid-template-columns: repeat(3,32%);
+
+        }
+        #reltd > div{
+          display: flex;
+          /* border: 1px solid; */
+          gap: 15px;
+          padding: 10px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #reltd > div > div >img{
+          width: 200px;
+          height: 200px;
+        }
+        #reltd > div > div > h3{
+          margin-top: 90px;
+          margin-left: 50px;
+        }
+        #FeatureRec {
+          display: flex;
+        }
+        #FeatureRec > div > img{
+          height: 300px;
+          width: 200px;
+          margin-left: 50px;
+          
+        }
+        #FeatureRec > div > img{
+          height: 300px;
+          width: 200px;
+          margin-left: 50px;
+          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+          
+        }
+        #FeatureRec > div > div{
+          text-align: center;
+          line-height: 15px;
+        }
+        #FeatureRec > div > div > button{
+          background-color: teal;
+          color: white;
+          font-size: 16px;
+        }
+        #FeatureRec > div:hover{
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
+        #FeatureRec > div{
+          margin-left: 3%;
+          /* border: 1px solid; */
+          padding: 30px;
+          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+        #slide{
+          display: flex;
+        }
+        #slide >div{
+          width: 25%;
+          height: 350px;
+          /* border: 1px solid; */
+          margin: 10px;
+          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+        }
+        #slide :hover{
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #slide >div >img{
+           height: 250px;
+           width: 250px;
+           margin-left: 50px;
+        }
+        #slide >div >div{
+           height: 100px;
+           /* margin-left: 100px; */
+           margin-top: 50px;
+        }
+        #slide >div >div >button{
+          background-color: teal;
+          width: 100%;
+          height: 50px;
+          color: whitesmoke;
+          font-size: 25px;
+        }
+        #PRid{
+          color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- navigation bar -->
+
+    <div class="nav">
+      <ul>
+          <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfm-LA5PTdzngT6LF5NfhIM0UPJ6jhHMEADg&usqp=CAU">     
+          </li>
+          <li ><input id="srch" type="text" placeholder="Enter product/ service to search"></li>
+            <li><button>Get Best Price</button></li>
+            <li class="nvrt">Covid-19 Supplies</li>
+            <li class="nvrt">Sell</li>
+            <li class="nvrt">Help</li>
+            <li class="nvrt">Message</li>
+            <a href="cart2.html"><li class="nvrt" style="color: whitesmoke;">Go to Cart</li></a>
+            <a href="SignUp.html"><li class="nvrt" style="color: whitesmoke;">Sign in</li></a>
+       </ul>
+    </div>
+
+    
+    <div id="dvhd">
+        <div id="dvimg">
+            <img id="blhv" src="https://3.imimg.com/data3/HJ/OY/MY-3792183/blue-heaven-cosmetics-private-limited-logo-120x120.jpg" alt="">
+        </div>
+        <div id="blh">
+            <h1>Blue Heaven Cosmetics (P) Ltd</h1>
+            <div id="dvhead">
+                <h3>Kriti Nagar, New Delhi, Delhi |</h3>
+                <h3>GST 07AACCB1155C1ZB |</h3>
+                <h3>Verified Supplier |</h3>
+                <div id="">
+                    <span>4.8/5</span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+    <div class="nav2">
+        <ul >
+            <li id="nvhm">Home</li>
+            <li id="nvhm">Product & Services</li>
+            <li id="nvhm">About</li>
+            <li id="nvhm">Contact Us</li>
+        </ul>
+    </div>
+    <div id="slide">
+      <div>
+       <img src="https://3.imimg.com/data3/ML/RO/MY-3792183/mascara-250x250.jpg" alt="">
+       <div>
+        <button>Mascara</button>
+       </div>
+      </div>
+      <div>
+        <img
+         src="https://3.imimg.com/data3/BX/CS/MY-3792183/foundation-250x250.jpg" alt=""></a>
+        <div>
+          <a href="discription.html"><button style="background-color: teal; width: 100%; color: whitesmoke; height: 50px; font-size: 25px;">Foundation</button></a>
+        </div>
+      </div>
+      <div>
+        <img src="https://3.imimg.com/data3/WJ/EO/MY-3792183/01-250x250.jpg" alt="">
+        <div>
+          <button>sindoor</button>
+        </div>
+      </div>
+      <div>
+        <img src="https://3.imimg.com/data3/NL/QG/MY-3792183/fruit-bleach-250x250.jpg" alt="">
+        <div>
+          <button>Fairness Scrub</button>
+        </div>
+      </div>
+    </div>
+    <div id="about_dv">
+        <h1>About Us</h1>
+        <p>Blue Heaven Cosmetics was started in 1974 by two young brothers, company MD's Mr.Charanjit Singh and Mr. Gurnam Singh with big dreams and ambitions.
+            By virtue of their determination and commitment Blue Heaven Cosmetics has been able to experience such an eventful journey revolutionizing the Indian decorative cosmetics industry.
+            Beauty cosmetics is an ever changing world. The company's product development departments therefore have been working systematically with the evolution of trendy color patterns ,themes, etc</p>
+    </div>
+    <div id="spacific">
+        <div class="spdv">
+            <div class="icon"><i class="fas fa-industry"></i></div>
+            <div class="icntxt">
+                <p>Nature of Business</p>
+                <h3>Manufacturer</h3>
+            </div>
+        </div>
+        <div class="spdv">
+            <div class="icon"><i class="fas fa-building"></i></div>
+        <div class="icntxt">
+            <p>Year of Establishment</p>
+            <h3>1974</h3>
+        </div>
+        </div>
+        <div class="spdv">
+            <div class="icon"><i class="fas fa-balance-scale-right"></i></div>
+            <div class="icntxt">
+                <p>Legal Status of Firm</p>
+                <h3>Limited Company (Ltd./Pvt.Ltd.)</h3>
+            </div>
+        </div>
+        <div class="spdv">
+            <div class="icon"> <i class="fas fa-chart-line"></i></div>
+        <div class="icntxt">
+            <p>Annual Turnover</p>
+            <h3>Rs. 50 - 100 Crore</h3>
+        </div>
+        </div>
+       <div class="spdv">
+        <div class="icon"><i class="far fa-file-alt"></i></div>
+        <div class="icntxt">
+            <p>GST Number</p>
+            <h3>07AACCB1155C1ZB</h3>
+        </div>
+       </div>
+        
+    </div>
+<div id="prServ"><h1>Products & Services</h1></div>
+    <div id="productSevices">
+         
+    </div>
+    <hr>
+    <h1 style="text-align: center;">Reviews & Rating</h1>
+    <div class="container">
+        <div class="inner">
+          <div class="rating">
+            <span class="rating-num">4.0</span>
+            <div class="rating-stars">
+              <span><i class="active icon-star"></i></span>
+              <span><i class="active icon-star"></i></span>
+              <span><i class="active icon-star"></i></span>
+              <span><i class="active icon-star"></i></span>
+              <span><i class="icon-star"></i></span>
+            </div>
+            <div class="rating-users">
+              <i class="icon-user"></i> 1,014,004 total
+            </div>
+          </div>
+          
+          <div class="histo">
+            <div class="five histo-rate">
+              <span class="histo-star">
+                <i class="active icon-star"></i> 5           </span>
+              <span class="bar-block">
+                <span id="bar-five" class="bar">
+                  <span>566,784</span>&nbsp;
+                </span> 
+              </span>
+            </div>
+            
+            <div class="four histo-rate">
+              <span class="histo-star">
+                <i class="active icon-star"></i> 4           </span>
+              <span class="bar-block">
+                <span id="bar-four" class="bar">
+                  <span>171,298</span>&nbsp;
+                </span> 
+              </span>
+            </div> 
+            
+            <div class="three histo-rate">
+              <span class="histo-star">
+                <i class="active icon-star"></i> 3           </span>
+              <span class="bar-block">
+                <span id="bar-three" class="bar">
+                  <span>94,940</span>&nbsp;
+                </span> 
+              </span>
+            </div>
+            
+            <div class="two histo-rate">
+              <span class="histo-star">
+                <i class="active icon-star"></i> 2           </span>
+              <span class="bar-block">
+                <span id="bar-two" class="bar">
+                  <span>44,525</span>&nbsp;
+                </span> 
+              </span>
+            </div>
+            
+            <div class="one histo-rate">
+              <span class="histo-star">
+                <i class="active icon-star"></i> 1           </span>
+              <span class="bar-block">
+                <span id="bar-one" class="bar">
+                  <span>136,457</span>&nbsp;
+                </span> 
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div >
+        <div class="gettouch">
+            <h1 style="padding: 13px; margin-left: 30px;">Get in touch with us</h1>
+       </div>
+       <div id="touchbox">
+        <div id="dv1" style="margin-left: 100px;">
+            <h3>Our Company</h3>
+            <p>About Us</p>
+            <p>Products & Services</p>
+            <p>Contact Us</p>
+            <p>Sitemap</p>
+            <p>Download Brochure</p>
+        </div>
+        <div id="dv1">
+            <h3>Reach Us</h3>
+            <h1>Blue Heaven Cosmetic(P) Ltd</h1>
+            <P>No.39, DLF Industrial Area, Kirti Nagar, New Delhi-110019,India</P>
+            <P>Arvind Srivastav(Manager)</P>
+            <P style="color: teal;">View Mobile Number</P>
+            <P style="color: green;">37% Call Response Rate</P>
+            <div>
+                <button class="tle">Send SMS</button>
+                <button class="brtle">Send Email</button>
+            </div>
+        </div>
+        <div id="dv1">
+            <h1 style="line-height: 15px;">Leave a Message, </h1>
+            <h3>we will call you back</h3>
+            <input type="number" id="inpt" placeholder="Enter your mobile" style="width: 50%;">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Additional details about your requirment......"></textarea>
+            <button class="tle">Submit Requirment</button>
+        </div>
+       </div>
+       </div>
+      <h1 style="margin-left: 2%;">Related Products from Top Suppliers</h1>
+     <div id="topsupplier">
+       <div>
+         <img  
+         src="https://5.imimg.com/data5/YI/TI/EP/SELLER-29822611/nice-and-naughty-matte-lipstick-250x250.jpg" alt="">
+         <div>
+          <h3 class="blu">Waterproof Lipstick</h3>
+          <h2>Rs 270</h2>
+          <h5>Power Agrotech</h5>
+          <p>Civil Lines, New Delhi, Delhi, India</p>
+          <h2 class="tel">View Mobile Number</h2>
+          <button>Contact Supplier</button>
+         </div>
+         
+       </div>
+       <div>
+        <img 
+        src="https://5.imimg.com/data5/ANDROID/Default/2021/7/BX/ID/RR/39626519/product-jpeg-250x250.jpg" alt="">
+        <div>
+          <h3 class="blu">5 in 1 lipstick</h3>
+          <h2>Rs 199/ </h2>
+          <h5>Ray Cosmetic</h5>
+          <p>Delhi, India</p>
+          <h2 class="tel">View Mobile Number</h2>
+          <button>Contact Supplier</button>
+         </div>
+       </div>
+       <div>
+        <img src="https://5.imimg.com/data5/FG/PI/VY/ANDROID-82406429/1561483856168-jpg-250x250.jpg" alt="">
+        <div>
+          <h3 class="blu">Dry matt lipstick</h3>
+          <h2>Rs 180</h2>
+          <h5>Raj Indian Colour Cosmetic</h5>
+          <p>Delhi, India</p>
+          <h2 class="tel">View Mobile Number</h2>
+          <button>Contact Supplier</button>
+         </div>
+       </div>
+       <div>
+        <img src="https://5.imimg.com/data5/LK/IN/YE/SELLER-15721794/huda-beauty-creamy-matte-lipstick-for-personal-250x250.jpg" alt="">
+        <div>
+          <h3 class="blu">Beauty Creamy Matte Lipstick </h3>
+          <h2>Rs 799</h2>
+          <h5>Anjali Enterprises</h5>
+          <p>New Delhi, Delhi, India</p>
+          <h2 class="tel">View Mobile Number</h2>
+          <button>Contact Supplier</button>
+         </div>
+       </div>
+     </div>
+     <h1 style="margin-top: 70px; margin-left: 50px;">Related Categories</h1>
+     <div id="reltd">
+       <div >
+          <div>
+          <img src="https://3.imimg.com/data3/EP/VJ/GLADMIN-105850/cosmetics-250x250.jpg" alt="">
+          </div>
+          <div><h3>Cosmetics</h3></div>
+       </div>
+        <div>
+         <div>
+          <img src="https://3.imimg.com/data3/TT/GW/GLADMIN-21908/beauty-cosmetics-250x250.jpg" alt="">
+         </div>
+         <div><h3>Beauty Cosmetics</h3></div>
+       </div>
+        <div>
+        <div>
+          <img src="https://3.imimg.com/data3/KG/HH/GLADMIN-11601/lip-balm-250x250.jpg" alt="">
+         </div>
+         <div><h3>Lip Balm</h3></div>
+       </div>
+        <div>
+         <div>
+         <img src="https://5.imimg.com/data5/ZB/JY/DJ/GLADMIN-68087/matte-lipstick-250x250.png" alt="">
+         </div>
+         <div><h3>Matte Lipstick</h3></div></div>
+       <div>
+         <div>
+         <img src="https://5.imimg.com/data5/JM/OT/KQ/GLADMIN-68087/cosmetic-third-party-manufacturing-250x250.jpg" alt="">
+         </div>
+         <div><h3>Cosmetic Third Party Manufacturing</h3></div>
+       </div>
+       <div>
+         <div>
+          <img src="https://3.imimg.com/data3/XW/DH/GLADMIN-32202/lip-gloss-250x250.jpg" alt="">
+         </div>
+         <div><h3>Lip Gloss</h3></div>
+       </div>
+     </div>
+     <h1 style="margin-top: 70px; margin-left: 50px;">Featured Recommendations</h1>
+     <div id="FeatureRec">
+       <div>
+       <img src="https://5.imimg.com/data5/TE/IH/KD/SELLER-681010/double-basket-deep-fryer-250x250.jpg" alt=""> 
+       <div>
+        <h3 class="blu">Double Basket Deep fryer</h3>
+        <h4>Rs 2100</h4>
+        <h3>Janshakti Industies</h3>
+        <p>Ahmedabad, Gujrat</p>
+        <button>Contact Supplier</button>
+       </div>
+       </div>
+       <div>
+        <img src="https://5.imimg.com/data5/SELLER/Default/2021/10/ED/EF/NB/2251978/df-8-l-s-digi-250x250.jpg" alt=""> 
+        <div>
+         <h3 class="blu">AKASH Indian Digital fryer</h3>
+         <h4>Rs 13900</h4>
+         <h3>Akash International</h3>
+         <p>New Delhi, Delhi</p>
+         <button>Contact Supplier</button>
+        </div>
+       </div>
+       <div>
+        <img src="https://5.imimg.com/data5/EQ/KQ/MY-12918121/broasted-chicken-fryer-250x250.jpg" alt=""> 
+        <div>
+         <h3 class="blu">Computer Control Fat Fryer</h3>
+         <h4>Rs 55000</h4>
+         <h3>Coolex Industries Private Limited</h3>
+         <p>Vijayawada, Andhra Pradesh</p>
+         <button>Contact Supplier</button>
+        </div>
+       </div>
+       <div>
+        <img src="https://5.imimg.com/data5/EQ/KQ/MY-12918121/broasted-chicken-fryer-250x250.jpg" alt=""> 
+        <div>
+         <h3 class="blu">Computer Control Fat Fryer</h3>
+         <h4>Rs 55000</h4>
+         <h3>Coolex Industries Private Limited</h3>
+         <p>Vijayawada, Andhra Pradesh</p>
+         <button>Contact Supplier</button>
+        </div>
+       </div>
+     </div>
+     <hr><br><br>
+</body>
+</html>
+<script>
+    var data = [
+    {
+              name: "Lipstick",
+              size: "Baked Brick Lipstick",
+              price: "440",
+              img:"https://4.imimg.com/data4/QY/OX/GLADMIN-3792183/1-250x250.jpg",
+          },
+          {
+              name: "Makeup",
+              size: "Foundation",
+              price: "84",
+              img:"https://3.imimg.com/data3/BX/CS/MY-3792183/foundation-250x250.jpg",
+          },
+          {
+              name: "Lip Product",
+              size: "Lip Glows",
+              price: "105",
+              img:"https://3.imimg.com/data3/RK/XF/MY-3792183/01-250x250.jpg",
+          },
+          {
+              name: "Bleach Cream",
+              size: "Frout Bleach",
+              price: "79",
+              img:"https://3.imimg.com/data3/NL/QG/MY-3792183/fruit-bleach-250x250.jpg",
+          },
+          {
+              name: "Scrub",
+              size: "Fairness Scrub",
+              price: "208",
+              img:"https://3.imimg.com/data3/QC/FL/MY-3792183/fairness-scrub-250x250.jpg",
+          }
+    ]
+
+
+
+    let parent = document.getElementById("productSevices");
+
+function showProduct(){
+data.forEach(function(product){
+
+
+
+let divs = document.createElement("div")
+
+ // divs.style.boxShadow = "2px 2px 4px #BDBDBD"
+//  divs.style.height = "300px"
+//  divs.style.padding = "8px"
+ divs.id = "prod1"
+
+let img = document.createElement("img")
+   img.id = "imid"
+img.src=product.img
+
+let pr_price = document.createElement("p")
+pr_price.id = "PRid"
+pr_price.textContent = product.price
+
+let pr_name = document.createElement("p")
+pr_name.id = "NMid"
+pr_name.textContent = product.name
+
+let size_name = document.createElement("p")
+size_name.id = "SZid"
+size_name.textContent = product.size
+
+let cart_btn = document.createElement("button")
+   cart_btn.id = "ctbtn"
+cart_btn.innerText = "Add to cart";  
+
+// let goToCart = document.createElement ("button")
+
+// goToCart.innerText = "Go to Cart"
+
+cart_btn.onclick = function(){
+ addtocart(product)
+};
+
+divs.append(img, pr_name,size_name, pr_price,cart_btn);
+
+parent.append(divs);
+
+
+});
+
+}
+showProduct();
+
+ if(localStorage.getItem("Mycart") === null){
+    localStorage.setItem("Mycart", JSON.stringify([]))
+}
+
+function addtocart(p){
+let pr_cart = JSON.parse(localStorage.getItem("Mycart"))
+ pr_cart.push(p);
+
+ localStorage.setItem("Mycart",JSON.stringify(pr_cart));
+
+//  console.log(("pr_cart:",pr_cart));
+
+}
+
+
+
+</script>
+<!-- <script>
+  $(document).ready(function() {
+  $('.bar span').hide();
+  $('#bar-five').animate({
+     width: '75%'}, 1000);
+  $('#bar-four').animate({
+     width: '35%'}, 1000);
+  $('#bar-three').animate({
+     width: '20%'}, 1000);
+  $('#bar-two').animate({
+     width: '15%'}, 1000);
+  $('#bar-one').animate({
+     width: '30%'}, 1000);
+  
+  setTimeout(function() {
+    $('.bar span').fadeIn('slow');
+  }, 1000);
+  
+});
+</script> -->
