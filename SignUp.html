@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+       div{
+           width: 15%;
+           margin: auto;
+       }
+       input{
+           height: 50px;
+           width: 100%;
+           margin: 20px;
+           background-color: #4FC3F7;
+           border: 0;
+           border-radius: 3px;
+           text-align: center;
+       }
+       h1{
+           text-align: center;
+       }
+       button{
+          height: 50px;
+          width: 100%;
+          margin: 20px;
+          background-color: yellow;
+          border:0;
+          border-radius: 5px;
+          font-size: 30px;
+       }
+       button:hover{
+           background-color: #76FF03;
+       }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h1>SIGN-UP</h1>
+       
+        <input id="email" type="text" placeholder="Enter email">
+        <input id="pass" type="password" placeholder="Enter Password">
+        <input id="num" type="number" placeholder="Enter Ph-number">
+        <button>SUBMIT</button>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    document.querySelector("button").addEventListener("click", sinUp);
+    var userArr = JSON.parse(localStorage.getItem("userData")) || []
+
+    function sinUp(){
+        
+
+        var pass = document.getElementById("pass").value;
+
+        var user = document.getElementById("email").value;
+        
+        var num = document.getElementById("num").value;
+
+
+      var userRecord = {
+          
+          passWord: pass,
+          UserName: user,
+          MObno: num,
+      }
+
+
+      userArr.push(userRecord);
+      localStorage.setItem("userData", JSON.stringify(userArr))
+
+
+      window.location.href = "signIn.html"
+
+    }
+</script>

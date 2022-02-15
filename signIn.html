@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+       div{
+           width: 15%;
+           margin: auto;
+       }
+       input{
+           height: 50px;
+           width: 100%;
+           margin: 20px;
+           background-color: #4FC3F7;
+           border: 0;
+           border-radius: 3px;
+           text-align: center;
+       }
+       h1{
+           text-align: center;
+       }
+       button{
+          height: 50px;
+          width: 100%;
+          margin: 20px;
+          background-color: yellow;
+          border:0;
+          border-radius: 5px;
+          font-size: 30px;
+       }
+       button:hover{
+           background-color: #76FF03;
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>LOG-IN</h1>
+    <input id="email" type="text" placeholder="Enter email">
+    <input id="pass" type="text" placeholder="Enter password">
+    <button>Submit</button>
+    </div>
+    
+</body>
+</html>
+<script>
+   
+   document.querySelector("button").addEventListener("click",SighIN)
+     var resUser = JSON.parse(localStorage.getItem("userData"))
+
+   function SighIN(){
+
+    var email = document.querySelector("#email").value;
+
+    var pass = document.querySelector("#pass").value;
+    console.log(resUser);
+    for(var i=0;i<resUser.length;i++){
+        if(resUser[i].UserName == email && resUser[i].passWord == pass){
+           
+            window.location.href = "product.html"
+        }else{
+            alert("Wrong Password")
+        }
+    }
+   }
+   
+
+</script>
